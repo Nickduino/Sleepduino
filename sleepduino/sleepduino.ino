@@ -14,8 +14,8 @@ void wake();  // sleep.ino
 ISR(WDT_vect);  // sleep.ino
 
 
-void flash() { // <== Put the useful stuff there
-  pinMode (LED, OUTPUT);
+void flash() { // <== Put the useful stuff in here
+  pinMode (LED, OUTPUT);  //The smart thing is to do that it in the setup() but I wanted you to have to modify only one fuction.
 #ifdef debug
   Serial.println("Flash!");
   delay(30);
